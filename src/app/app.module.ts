@@ -3,14 +3,35 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PersoComponent } from './perso/perso/perso.component';
+import {TableModule} from 'primeng/table';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ButtonModule} from 'primeng/button';
+import {CardModule} from 'primeng/card';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MonstreComponent } from './monstre/monstre/monstre.component';
+import { HeaderComponent } from './layot/header/header.component';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PersoComponent,
+    MonstreComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TableModule,
+    BrowserAnimationsModule,
+    ButtonModule,
+    CardModule,
+    FormsModule,
+    ReactiveFormsModule,
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
