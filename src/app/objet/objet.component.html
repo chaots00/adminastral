@@ -1,1 +1,87 @@
 <p>objet works!</p>
+
+<p-card>
+    <from [formGroup]="contactForm">
+        <div class="p-field">
+            <label for="nom">nom</label>
+            <input id="nom" type="text" pInputText
+            formControlName="nom"> 
+
+            <small *ngif="submitted && f.p-nom.errors"
+            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
+            <i class="pi pi-exclamation-triangle p-m-1"></i>
+            <span>ce champ est obligatoire </span>
+        </small>
+        </div>
+        <div class="p-field">
+            <label for="dega">dega</label>
+            <input id="dega" type="number" pInputText
+            formControlName="dega"> 
+
+            <small *ngif="submitted && f.p-dega.errors"
+            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
+            <i class="pi pi-exclamation-triangle p-m-1"></i>
+            <span>ce champ est obligatoire </span>
+        </small>
+        </div>
+        <div class="p-field">
+            <label for="prix_vente">prix_vente</label>
+            <input id="prix_vente" type="number" pInputText
+            formControlName="prix_vente"> 
+
+            <small *ngif="submitted && f.p-prix_vente.errors"
+            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
+            <i class="pi pi-exclamation-triangle p-m-1"></i>
+            <span>ce champ est obligatoire </span>
+        </small>
+        </div>
+        <div class="p-field">
+            <label for="prix_achat">prix_achat</label>
+            <input id="prix_achat" type="number" pInputText
+            formControlName="prix_achat"> 
+
+            <small *ngif="submitted && f.p-prix_achat.errors"
+            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
+            <i class="pi pi-exclamation-triangle p-m-1"></i>
+            <span>ce champ est obligatoire </span>
+        </small>
+        </div>
+        <div class="p-field">
+            <label for="effect">effect</label>
+            <input id="effect" type="text" pInputText
+            formControlName="effect"> 
+
+            <small *ngif="submitted && f.p-effect.errors"
+            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
+            <i class="pi pi-exclamation-triangle p-m-1"></i>
+            <span>ce champ est obligatoire </span>
+        </small>
+        </div>
+    <button pButton (click)="save()">envoyer</button>
+    </from>
+</p-card>
+<p-table [value]="objet">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>id</th>
+            <th>nom</th>
+            <th>dega</th>
+            <th>prix vente</th>
+            <th>pric achat</th>
+            <th>effect</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-objet>
+        <tr>
+            <td>{{objet.id}}</td>
+            <td>{{objet.nom}}</td>
+            <td>{{objet.dega}}</td>
+            <td>{{objet.prix_vente}}</td>
+            <td>{{objet.prix_achat}}</td>
+            <td>{{objet.effect}}</td>
+            <td><button pButton (click)="removobjet(objet.id)">supprimer</button></td>
+            <td><button pButton (click)="updateobjet(objet.id)">modif</button></td>
+        </tr>
+    </ng-template>
+</p-table>
+
