@@ -11,6 +11,7 @@ import {CardModule} from 'primeng/card';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MonstreComponent } from './monstre/monstre/monstre.component';
 import { HeaderComponent } from './layot/header/header.component';
+import { ObjetComponent } from './objet/objet.component';
 
 
 
@@ -19,7 +20,8 @@ import { HeaderComponent } from './layot/header/header.component';
     AppComponent,
     PersoComponent,
     MonstreComponent,
-    HeaderComponent
+    HeaderComponent,
+    ObjetComponent
   ],
   imports: [
     BrowserModule,

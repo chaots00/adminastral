@@ -8,7 +8,8 @@ import { MonstreService } from '../monstre.service';
 @Component({
   selector: 'app-monstre',
   templateUrl: './monstre.component.html',
-  styleUrls: ['./monstre.component.scss']
+  styleUrls: ['./monstre.component.scss'],
+  providers: [MessageService]
 })
 export class MonstreComponent implements OnInit {
   public monstre: Monstre[] = [];
