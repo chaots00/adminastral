@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MonstreComponent } from './monstre/monstre/monstre.component';
 import { HeaderComponent } from './layot/header/header.component';
 import { ObjetComponent } from './objet/objet.component';
+import { QuetesComponent } from './quetes/quetes.component';
 
 
 
@@ -21,7 +22,8 @@ import { ObjetComponent } from './objet/objet.component';
     PersoComponent,
     MonstreComponent,
     HeaderComponent,
-    ObjetComponent
+    ObjetComponent,
+    QuetesComponent
   ],
   imports: [
     BrowserModule,

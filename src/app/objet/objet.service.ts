@@ -7,9 +7,7 @@ import { Objet } from './objet';
 })
 export class ObjetService {
   private _key:string = "objet";
-  private _objet: Objet[] = [{
-    id:"test",nom :"test", dega:10,prix_vente:10,prix_achat:10,effect:"test"
-  }]
+  private _objet: Objet[] = []
   constructor() { this._initalizationObjet()}
 
   getAll(): Object[] {
