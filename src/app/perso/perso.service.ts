@@ -43,7 +43,7 @@ export class PersoService {
   private _savePerso(){
     try{
   const perso = JSON.stringify(this._perso);
-  localStorage.setPerso(this._key,perso);
+  localStorage.setItem(this._key,perso);
     }catch(e){
   console.error(e);
     }

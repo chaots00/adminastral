@@ -37,11 +37,11 @@ export class MonstreService {
       this._saveMonstre();
     }
   }
-
+ 
   private _saveMonstre(){
     try{
-  const perso = JSON.stringify(this._monstre);
-  localStorage.setMonstre(this._key,perso);
+  const monstre = JSON.stringify(this._monstre);
+  localStorage.setItem(this._key,monstre);
     }catch(e){
   console.error(e);
     }
