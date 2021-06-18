@@ -13,6 +13,7 @@ import { MonstreComponent } from './monstre/monstre/monstre.component';
 import { HeaderComponent } from './layot/header/header.component';
 import { ObjetComponent } from './objet/objet.component';
 import { QuetesComponent } from './quetes/quetes.component';
+import { CompetenceComponent } from './competence/competence.component';
 
 
 
@@ -23,7 +24,8 @@ import { QuetesComponent } from './quetes/quetes.component';
     MonstreComponent,
     HeaderComponent,
     ObjetComponent,
-    QuetesComponent
+    QuetesComponent,
+    CompetenceComponent
   ],
   imports: [
     BrowserModule,
