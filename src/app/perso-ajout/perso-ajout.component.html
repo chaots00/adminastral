@@ -1,0 +1,93 @@
+<p-card>
+    <from [formGroup]="contactForm">
+        <div class="p-field">
+            <label for="nom">nom</label>
+            <input id="nom" type="text" pInputText
+            formControlName="nom"> 
+
+            <small *ngif="submitted && f.p-nom.errors"
+            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
+            <i class="pi pi-exclamation-triangle p-m-1"></i>
+            <span>ce champ est obligatoire </span>
+        </small>
+        </div>
+        <div class="p-field">
+            <label for="niveau">niveau</label>
+            <input id="niveau" type="number" pInputText
+            formControlName="niveau"> 
+
+            <small *ngif="submitted && f.p-niveau.errors"
+            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
+            <i class="pi pi-exclamation-triangle p-m-1"></i>
+            <span>ce champ est obligatoire </span>
+        </small>
+        </div>
+        <div class="p-field">
+            <label for="pv_max">pv_max</label>
+            <input id="pv_max" type="number" pInputText
+            formControlName="pv_max"> 
+
+            <small *ngif="submitted && f.p-pv_max.errors"
+            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
+            <i class="pi pi-exclamation-triangle p-m-1"></i>
+            <span>ce champ est obligatoire </span>
+        </small>
+        </div>
+        <div class="p-field">
+            <label for="dega">dega</label>
+            <input id="dega" type="number" pInputText
+            formControlName="dega"> 
+
+            <small *ngif="submitted && f.p-dega.errors"
+            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
+            <i class="pi pi-exclamation-triangle p-m-1"></i>
+            <span>ce champ est obligatoire </span>
+        </small>
+        </div>
+        <div class="p-field">
+            <label for="exp">exp</label>
+            <input id="exp" type="number" pInputText
+            formControlName="exp"> 
+
+            <small *ngif="submitted && f.p-exp.errors"
+            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
+            <i class="pi pi-exclamation-triangle p-m-1"></i>
+            <span>ce champ est obligatoire </span>
+        </small>
+        </div>
+        <div class="p-field">
+            <label for="classe">classe</label>
+            <input id="classe" type="text" pInputText
+            formControlName="classe"> 
+
+            <small *ngif="submitted && f.p-classe.errors"
+            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
+            <i class="pi pi-exclamation-triangle p-m-1"></i>
+            <span>ce champ est obligatoire </span>
+        </small>
+        </div>
+        <div class="p-field">
+            <label for="competence">competence</label>
+            <input id="competence" type="text" pInputText
+            formControlName="competence"> 
+
+            <small *ngif="submitted && f.p-competence.errors"
+            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
+            <i class="pi pi-exclamation-triangle p-m-1"></i>
+            <span>ce champ est obligatoire </span>
+        </small>
+        </div>
+        <div class="p-field">
+            <label for="histoire">histoire</label>
+            <input id="histoire" type="text" pInputText
+            formControlName="histoire"> 
+
+            <small *ngif="submitted && f.p-histoire.errors"
+            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
+            <i class="pi pi-exclamation-triangle p-m-1"></i>
+            <span>ce champ est obligatoire </span>
+        </small>
+        </div>
+    <button pButton (click)="save()">envoyer</button>
+    </from>
+</p-card>

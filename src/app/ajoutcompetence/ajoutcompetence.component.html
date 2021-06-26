@@ -1,0 +1,40 @@
+
+
+<p-card>
+    <from [formGroup]="contactForm">
+        <div class="p-field">
+            <label for="nom">nom</label>
+            <input id="nom" type="text" pInputText
+            formControlName="nom"> 
+
+            <small *ngif="submitted && f.p-nom.errors"
+            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
+            <i class="pi pi-exclamation-triangle p-m-1"></i>
+            <span>ce champ est obligatoire </span>
+        </small>
+        </div>
+        <div class="p-field">
+            <label for="niv_obt">niv_obt</label>
+            <input id="niv_obt" type="number" pInputText
+            formControlName="niv_obt"> 
+
+            <small *ngif="submitted && f.p-niv_obt.errors"
+            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
+            <i class="pi pi-exclamation-triangle p-m-1"></i>
+            <span>ce champ est obligatoire </span>
+        </small>
+        </div>
+        <div class="p-field">
+            <label for="classe">classe</label>
+            <input id="classe" type="text" pInputText
+            formControlName="classe"> 
+
+            <small *ngif="submitted && f.p-classe.errors"
+            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
+            <i class="pi pi-exclamation-triangle p-m-1"></i>
+            <span>ce champ est obligatoire </span>
+        </small>
+        </div>
+    <button pButton (click)="save()">envoyer</button>
+    </from>
+</p-card>

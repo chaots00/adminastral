@@ -7,4 +7,5 @@ export interface Perso {
     exp:number
     classe:string
     competence:string
+    histoire:string
 }

@@ -1,0 +1,71 @@
+<p-card>
+    <from [formGroup]="contactForm">
+        <div class="p-field">
+            <label for="nom">nom</label>
+            <input id="nom" type="text" pInputText
+            formControlName="nom"> 
+
+            <small *ngif="submitted && f.p-nom.errors"
+            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
+            <i class="pi pi-exclamation-triangle p-m-1"></i>
+            <span>ce champ est obligatoire </span>
+        </small>
+        </div>
+        <div class="p-field">
+            <label for="pv">pv</label>
+            <input id="pv" type="number" pInputText
+            formControlName="pv"> 
+
+            <small *ngif="submitted && f.p-pv.errors"
+            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
+            <i class="pi pi-exclamation-triangle p-m-1"></i>
+            <span>ce champ est obligatoire </span>
+        </small>
+        </div>
+        <div class="p-field">
+            <label for="gold">gold</label>
+            <input id="gold" type="number" pInputText
+            formControlName="gold"> 
+
+            <small *ngif="submitted && f.p-gold.errors"
+            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
+            <i class="pi pi-exclamation-triangle p-m-1"></i>
+            <span>ce champ est obligatoire </span>
+        </small>
+        </div>
+        <div class="p-field">
+            <label for="dega">dega</label>
+            <input id="dega" type="number" pInputText
+            formControlName="dega"> 
+
+            <small *ngif="submitted && f.p-dega.errors"
+            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
+            <i class="pi pi-exclamation-triangle p-m-1"></i>
+            <span>ce champ est obligatoire </span>
+        </small>
+        </div>
+        <div class="p-field">
+            <label for="exp">exp</label>
+            <input id="exp" type="number" pInputText
+            formControlName="exp"> 
+
+            <small *ngif="submitted && f.p-exp.errors"
+            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
+            <i class="pi pi-exclamation-triangle p-m-1"></i>
+            <span>ce champ est obligatoire </span>
+        </small>
+        </div>
+        <div class="p-field">
+            <label for="description">description</label>
+            <input id="description" type="text" pInputText
+            formControlName="description"> 
+
+            <small *ngif="submitted && f.p-description.errors"
+            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
+            <i class="pi pi-exclamation-triangle p-m-1"></i>
+            <span>ce champ est obligatoire </span>
+        </small>
+        </div>
+    <button pButton (click)="save()">envoyer</button>
+    </from>
+</p-card>

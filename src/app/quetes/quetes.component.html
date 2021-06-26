@@ -1,81 +1,11 @@
-<p>quetes works!</p>
+<button pButton  label="ajouter" class="p-button-info" routerLink="/quette-ajout"></button>
 
-<p-card>
-    <from [formGroup]="contactForm">
-        <div class="p-field">
-            <label for="nom">nom</label>
-            <input id="nom" type="text" pInputText
-            formControlName="nom"> 
 
-            <small *ngif="submitted && f.p-nom.errors"
-            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
-            <i class="pi pi-exclamation-triangle p-m-1"></i>
-            <span>ce champ est obligatoire </span>
-        </small>
-        </div>
-        <div class="p-field">
-            <label for="ennoncer">ennoncer</label>
-            <input id="ennoncer" type="text" pInputText
-            formControlName="ennoncer"> 
-
-            <small *ngif="submitted && f.p-ennoncer.errors"
-            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
-            <i class="pi pi-exclamation-triangle p-m-1"></i>
-            <span>ce champ est obligatoire </span>
-        </small>
-        </div>
-        <div class="p-field">
-            <label for="niveau">niveau</label>
-            <input id="niveau" type="number" pInputText
-            formControlName="niveau"> 
-
-            <small *ngif="submitted && f.p-niveau.errors"
-            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
-            <i class="pi pi-exclamation-triangle p-m-1"></i>
-            <span>ce champ est obligatoire </span>
-        </small>
-        </div>
-        <div class="p-field">
-            <label for="recompense">recompense</label>
-            <input id="recompense" type="number" pInputText
-            formControlName="recompense"> 
-
-            <small *ngif="submitted && f.p-recompense.errors"
-            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
-            <i class="pi pi-exclamation-triangle p-m-1"></i>
-            <span>ce champ est obligatoire </span>
-        </small>
-        </div>
-        <div class="p-field">
-            <label for="monstre">monstre</label>
-            <input id="monstre" type="text" pInputText
-            formControlName="monstre"> 
-
-            <small *ngif="submitted && f.p-monstre.errors"
-            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
-            <i class="pi pi-exclamation-triangle p-m-1"></i>
-            <span>ce champ est obligatoire </span>
-        </small>
-        </div>
-        <div class="p-field">
-            <label for="exp">exp</label>
-            <input id="exp" type="number" pInputText
-            formControlName="exp"> 
-
-            <small *ngif="submitted && f.p-exp.errors"
-            class="p-invalid p-invalid-icon p-d-flex p-ai-center">
-            <i class="pi pi-exclamation-triangle p-m-1"></i>
-            <span>ce champ est obligatoire </span>
-        </small>
-        </div>
-    <button pButton (click)="save()">envoyer</button>
-    </from>
-</p-card>
 <p-table [value]="quetes">
     <ng-template pTemplate="header">
         <tr>
             <th>id</th>
-            <th>nom</th>
+            <th>nom </th>
             <th>ennoncer</th>
             <th>niveau</th>
             <th>recompense</th>
@@ -86,14 +16,14 @@
     <ng-template pTemplate="body" let-quetes>
         <tr>
             <td>{{quetes.id}}</td>
-            <td>{{quetes.nom}}</td>
-            <td>{{quetes.ennoncer}}</td>
+            <td>{{quetes.nom |maj}}</td>
+            <td>{{quetes.ennoncer|maj}}</td>
             <td>{{quetes.niveau}}</td>
             <td>{{quetes.recompense}}</td>
             <td>{{quetes.monstre}}</td>
             <td>{{quetes.exp}}</td>
-            <td><button pButton (click)="removquetes(quetes.id)">supprimer</button></td>
-            <td><button pButton (click)="updatequetes(quetes.id)">modif</button></td>
+            <td><button pButton (click)="removquetes(quetes.id)">supprimer</button>
+            <button pButton [routerLink]="'/quette-edit/'+ quetes.id">modif</button></td>
         </tr>
     </ng-template>
 </p-table>

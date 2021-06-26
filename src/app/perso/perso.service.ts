@@ -8,7 +8,7 @@ import { v4 as uuidv4 } from 'uuid';
 export class PersoService {
   private _key:string = "perso";
   private _perso: Perso[] = [{
-    id:"test",nom :"test", niveau:10,pv_max:10, dega:10,exp:10,classe:"test",competence:"test"
+    id:"test",nom :"test", niveau:10,pv_max:10, dega:10,exp:10,classe:"test",competence:"test",histoire:"test"
   }]
   constructor() {this._initalizationPerso() }
 

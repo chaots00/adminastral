@@ -14,6 +14,12 @@ import { HeaderComponent } from './layot/header/header.component';
 import { ObjetComponent } from './objet/objet.component';
 import { QuetesComponent } from './quetes/quetes.component';
 import { CompetenceComponent } from './competence/competence.component';
+import { MajPipe } from './maj.pipe';
+import { PersoAjoutComponent } from './perso-ajout/perso-ajout.component';
+import { AjoutObjetComponent } from './ajout-objet/ajout-objet.component';
+import { AjoutMonstreComponent } from './ajout-monstre/ajout-monstre.component';
+import { AjoutQueComponent } from './ajout-que/ajout-que.component';
+import { AjoutcompetenceComponent } from './ajoutcompetence/ajoutcompetence.component';
 
 
 
@@ -25,7 +31,13 @@ import { CompetenceComponent } from './competence/competence.component';
     HeaderComponent,
     ObjetComponent,
     QuetesComponent,
-    CompetenceComponent
+    CompetenceComponent,
+    MajPipe,
+    PersoAjoutComponent,
+    AjoutObjetComponent,
+    AjoutMonstreComponent,
+    AjoutQueComponent,
+    AjoutcompetenceComponent
   ],
   imports: [
     BrowserModule,

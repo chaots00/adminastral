@@ -1,1 +1,23 @@
-<p>competence works!</p>
+<button pButton  label="ajouter" class="p-button-info" routerLink="/competence-ajout"></button>
+
+<p-table [value]="competence">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>id</th>
+            <th>nom</th>
+            <th>niv_obt</th>
+            <th>classe</th>
+            <th>action</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-competence>
+        <tr>
+            <td>{{competence.id}}</td>
+            <td>{{competence.nom |maj}}</td>
+            <td>{{competence.niv_obt}}</td>
+            <td>{{competence.classe}}</td>
+            <td><button pButton (click)="removcompetence(competence.id)">supprimer</button>
+                <button pButton [routerLink]="'/competence-edit/'+ competence.id">modif</button></td>
+        </tr>
+    </ng-template>
+</p-table>
